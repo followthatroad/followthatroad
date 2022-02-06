@@ -45,3 +45,24 @@ age = 20
 color = "빨간"
 
 print(f"나는 {age}살이며, {color}색을 좋아해요.") #f를 넣었더니, 실제 변수값을 가지고옴
+
+
+
+print ("백문이 불여일견\n백견이 불여일타")
+
+#저는 "나도코딩"입니다. "따옴뵤가 헷갈림"
+print ('저는 "나도코딩"입니다.')
+print ("저는 \"나도코딩\"입니다.") #뒤에 나오는걸 그냥 문자열(탈출문자)로 인정해줌 \", \'"
+
+#\\ : 문장 내에서 \로 바뀜
+print ("C:\\Users\\Drea Choi\\Desktop\\PythonWorkspace")
+
+#\r : 커서를 맨 앞으로 이동
+
+print ("Red Apple\rPine") #커서를 제일 앞으로 이동해서 Pine을 적음
+
+#\b : 백스페이스 역할
+print ("Redd\bApple") #하나 지우고 적어서 출력해줌
+
+#\t : 탭
+print ("Red\tApple")
