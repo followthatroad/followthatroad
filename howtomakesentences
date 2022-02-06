@@ -1,0 +1,47 @@
+기본 문자열
+python = "Python is Amazing"
+print (python)
+print (python.lower()) #모두 소문자로
+print (python.upper()) #모두 소문자로
+
+print(python[0].isupper()) #첫번째가 대문자냐
+print(len(python)) #길이 출ㄹ력해줌
+
+
+print (python.replace("Python","Java"))
+index = python.index("n") #n 위치찾기
+print(index)
+index = python.index("n", index+1) #다음 부터 찾기
+print(index)
+
+print(python.find("Java")) #없으면 =1
+# print(python.inxex("Java")) #없어서 에러뜸
+print(python.count("n")) #두번 나왔으니까 2번
+
+
+#문자열 포맷
+print ("a"+"b")
+print ("a", "b")
+
+#방법1
+
+print ("나는 %d입니다." % 20)
+print ("나는 %s를 좋아해요." %"파이썬") #s는 스트링 문자열, d는 정수
+print( "Apple은 %c로 시작해요" %"A") #1 character
+
+print ("나는 %s살입니다" %20) #s도 숫자 문제없이 출력가능
+print ("나는 %s색과 %s색을 좋아해요." %("파란", "빨강"))
+
+#방법 2
+print ("나는 {}살입니다." .format(20)) #포맷에 들어있는 값을 중괄호안에 넣어줌, 2개 이상 값을 넣고싶을때
+print ("나는 {}색과 {}색을 좋아해요.".format("파란", "빨강")) #점을 찍어줘야하네, 순서대로 넣어줌
+print ("나는 {1}색과 {0}색을 좋아해요.".format("파란", "빨강"))
+
+#방법3
+print ("나는 {age}살이며, {color}색을 좋아해요.".format (age=20, color="빨간")) #이 변수가 이 명령어 외에서 작동안됨
+
+#방법4
+age = 20
+color = "빨간"
+
+print(f"나는 {age}살이며, {color}색을 좋아해요.") #f를 넣었더니, 실제 변수값을 가지고옴
