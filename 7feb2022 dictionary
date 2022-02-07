@@ -1,0 +1,108 @@
+#사전 만들기
+# 키에 대한 중복이 허용되지않음
+
+cabinet = {3:"유재석", 100:"김태호"}  #key는 3이고 value는 유재석
+print (cabinet[3]) #3번 열쇠에는 김태호
+print (cabinet[100])
+
+print(cabinet.get(3))
+#print(cabinet[5])
+print(cabinet.get(5))
+print (cabinet.get(5, "사용 가능")) #비어 있으면 사용가능을 출력
+
+print(3 in cabinet) #True
+print(5 in cabinet) #false 키에 아무나 있는지 없는지
+
+cabinet = {"A-3":"유재석", "B-100":"김태호"}  #key는 3이고 value는 유재석
+print(cabinet)
+
+#새손님
+cabinet["C-20"] = "김종국"
+cabinet ["C-100"] = "조세호"
+print (cabinet)
+
+#간 손님
+del cabinet ["C-20"]
+print (cabinet)
+
+#key 들만 출력
+print (cabinet.keys())
+
+#value 들만 출력
+print (cabinet.values())
+#쌍으로 출력
+print (cabinet.items())
+
+
+#목욕탕 폐점
+cabinet.clear()
+print(cabinet)
+
+
+#듀플
+
+
+menu = ("돈까스", "치즈까스")
+print(menu[0])
+
+#menu.add("생산까스") #이거 안됨
+
+name = "김종국"
+age =20
+hobby = "코딩"
+print (name, age, hobby)
+
+#한번에 입력하기 
+(name, age, hobby) = ("김종국", 20, "코딩")
+
+print (name, age, hobby)
+
+
+## 집합 (set)
+중복 안됨, 순서 없음
+
+my_set= {1,2,3,3,3} #사전이랑 같은 중괄호인데 key, value 조합이 아님 3:"유재석"
+print (my_set)
+
+java = {"유재석", "김태호", "양태형"}
+
+python = set(["유재석", "박명수"])
+
+#교집합 (java와 python 개발자)
+
+print (java&python)
+print (java.intersection(python))
+
+#합집합 둘다 가능한 사람
+
+print(java|python)
+print(java.union(python)) #다만 순서가 보장안됨
+
+#차집합 (Java 할 수 있지만 python은 할줄 모르는 개발자)
+print (java-python)
+print (java.difference (python))
+
+
+#python을 할 줄 아는 사람이 늘어남
+python.add("김태호")
+print (python)
+
+#java를 더이상 못하는 김태호씨
+java.remove("김태호")
+print("java 개발자", java)
+
+
+
+#자료 구조의 변경
+
+menu = {"커피", "우유", "주스"}
+print(menu, type(menu))
+
+menu = list(menu)
+print(menu, type(menu))
+
+menu = tuple(menu)
+print(menu, type(menu))
+
+menu=set(menu)
+print (menu, type(menu))
